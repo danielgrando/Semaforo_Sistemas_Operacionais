@@ -28,17 +28,17 @@ let array = ['vermelho', 'verde', "amarelho"]
         }
     }
 
-  Verificacount_semaforo = (array) => {
-    array.map((item) => {
+    verificaCount_semaforo = (array) => {
         if(array.lenght !== 0){
-            count_semaforo ++
-            setTimeout (callback, 300)
+            array.map((item) => {
+                count_semaforo ++
+                setTimeout (callback, 300)
+            })
+            console.log('Existe coisas para serem executadas!')
         }else{
-            return;
+            return ;
         }
-    })
-    console.log('Existe coisas para serem executadas!')
-  }
+    }
 
-  Verificacount_semaforo(array);
+  verificaCount_semaforo(array);
 </script>
