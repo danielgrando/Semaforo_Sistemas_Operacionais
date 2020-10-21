@@ -20,23 +20,24 @@ let array = ['vermelho', 'verde', "amarelho"]
         console.log(array);
         console.log(count_semaforo);
 
-        if (count_semaforo === 0) {
-            console.log('Não tem mais nada para executar!')
-            return ;
-        } else {
+        if (count_semaforo !== 0) {
             console.log('Existe coisas para serem executadas!')
+            return ;
+        }else{
+            console.log('Não tem mais nada para executar!')
         }
     }
 
   Verificacount_semaforo = (array) => {
     array.map((item) => {
-        if(item.length !== 0){
+        if(array.lenght !== 0){
             count_semaforo ++
             setTimeout (callback, 300)
         }else{
             return;
         }
     })
+    console.log('Existe coisas para serem executadas!')
   }
 
   Verificacount_semaforo(array);
