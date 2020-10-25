@@ -36,15 +36,18 @@
 
 <script>
 let count_semaforo = 0
+let up = 0
+let down = 0
 let array = ['vermelho', 'verde', "amarelo"]
 
     callback = () => {
         console.log(count_semaforo);
-        count_semaforo--
+        count_semaforo --
+        down --
         console.log(array);
         console.log(count_semaforo);
 
-        if (count_semaforo !== 0) {
+        if (count_semaforo !== 0 && up !== 0) {
             console.log('Existe coisas para serem executadas!')
             return ;
         }else{
@@ -55,6 +58,7 @@ let array = ['vermelho', 'verde', "amarelo"]
     verificaSemaforo = (array) => {
         if(array.lenght !== 0){
             array.map((item) => {
+                up ++
                 count_semaforo ++
                 setTimeout (callback, 300)
             })
