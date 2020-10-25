@@ -25,7 +25,7 @@
         width: 100vw;
         align-items: center;
         background-color: #150485;
-        opacity: 0.8;
+        opacity: 0.9;
     }
     h1{
         font-family: Arial, Helvetica, sans-serif;
@@ -38,19 +38,19 @@
 let count_semaforo = 0
 let up = 0
 let down = 0
-let array = ['vermelho', 'verde', "amarelo"]
+let array = ['0', '1', "2"]
 
     callback = () => {
         count_semaforo --
+        down --
         console.log(count_semaforo);
         if (count_semaforo !== 0 && up !== 0 && down !== up) {
-            console.log('Processo!')
+            console.log('Processando!')
             down --
         }else{
-            console.log('Sem processo!')
+            console.log('Sem processos!')
             return;
         }
-        up--
     }
 
     verificaSemaforo = (array) => {
@@ -60,8 +60,7 @@ let array = ['vermelho', 'verde', "amarelo"]
                 count_semaforo ++
                 setTimeout (callback, 300)
             })
-            console.log(count_semaforo);
-            console.log('Processo!')
+            console.log('Processando!')
         }else{
             return ;
         }
